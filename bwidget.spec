@@ -3,20 +3,18 @@
 
 Name:           bwidget
 Version:        1.8.0
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Extended widget set for Tk
-
 Group:          System/Libraries
 License:        BSD
 URL:            http://tcllib.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/tcllib/BWidget-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
-
-BuildArch:      noarch
-#Requires:       tcl(abi) = 8.5 tk
+#Requires:      tcl(abi) = 8.5 tk
 Requires:       tcl
 Requires:       tk
 BuildRequires:  tcl
+BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 An extended widget set for Tcl/Tk.
@@ -28,21 +26,21 @@ An extended widget set for Tcl/Tk.
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
+%{__rm} -rf %{buildroot}
 # Don't bother with the included configure script and Makefile.  They
 # are missing a lot of pieces and won't work at all.  Installation is
 # pretty simple, so we can just do it here manually.
-mkdir -p $RPM_BUILD_ROOT/%{tcl_sitelib}/%{name}%{version}/
-mkdir $RPM_BUILD_ROOT/%{tcl_sitelib}/%{name}%{version}/lang
-mkdir $RPM_BUILD_ROOT/%{tcl_sitelib}/%{name}%{version}/images
+%{__mkdir_p} %{buildroot}%{tcl_sitelib}/%{name}%{version}/
+%{__mkdir_p} %{buildroot}%{tcl_sitelib}/%{name}%{version}/lang
+%{__mkdir_p} %{buildroot}%{tcl_sitelib}/%{name}%{version}/images
 
-install -m 0644 -pD *.tcl $RPM_BUILD_ROOT/%{tcl_sitelib}/%{name}%{version}/
-install -m 0644 -pD lang/*.rc $RPM_BUILD_ROOT/%{tcl_sitelib}/%{name}%{version}/lang/
-install -m 0644 -pD images/*.gif images/*.xbm $RPM_BUILD_ROOT/%{tcl_sitelib}/%{name}%{version}/images/
+%{__install} -m 0644 -pD *.tcl %{buildroot}%{tcl_sitelib}/%{name}%{version}/
+%{__install} -m 0644 -pD lang/*.rc %{buildroot}%{tcl_sitelib}/%{name}%{version}/lang/
+%{__install} -m 0644 -pD images/*.gif images/*.xbm %{buildroot}%{tcl_sitelib}/%{name}%{version}/images/
 
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+%{__rm} -rf %{buildroot}
 
 
 %files
