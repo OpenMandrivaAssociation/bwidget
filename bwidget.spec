@@ -14,7 +14,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildArch:      noarch
 #Requires:       tcl(abi) = 8.5 tk
-Requires:       tcl = %{tcl_version}
+Requires:       tcl
 Requires:       tk
 BuildRequires:  tcl
 
@@ -46,8 +46,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %files
-%defattr(-,root,root,-)
-%{tcl_sitelib}/%{name}%{version}
+%defattr(0644,root,root,0755)
 %doc README.txt LICENSE.txt
 %doc BWman/*.html
-
+%defattr(-,root,root,0755)
+%{tcl_sitelib}/%{name}%{version}
