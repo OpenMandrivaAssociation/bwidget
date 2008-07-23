@@ -3,7 +3,7 @@
 
 Name:           bwidget
 Version:        1.8.0
-Release:        %mkrel 2
+Release:        %mkrel 4
 Summary:        Extended widget set for Tk
 Group:          System/Libraries
 License:        BSD
