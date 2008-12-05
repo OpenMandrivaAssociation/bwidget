@@ -9,7 +9,7 @@ Source0:        http://downloads.sourceforge.net/tcllib/BWidget-%{version}.tar.g
 #Requires:      tcl(abi) = 8.5 tk
 Requires:       tcl
 Requires:       tk
-BuildRequires:  tcl
+BuildRequires:  tcl-devel
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
