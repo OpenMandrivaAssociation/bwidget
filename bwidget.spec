@@ -1,9 +1,6 @@
-%define tcl_version 8.5
-%define tcl_sitelib %{_datadir}/tcl%{tcl_version}
-
 Name:           bwidget
 Version:        1.8.0
-Release:        %mkrel 4
+Release:        %mkrel 5
 Summary:        Extended widget set for Tk
 Group:          System/Libraries
 License:        BSD
