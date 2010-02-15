@@ -1,17 +1,17 @@
-Name:           bwidget
-Version:        1.8.0
-Release:        %mkrel 6
-Summary:        Extended widget set for Tk
-Group:          System/Libraries
-License:        BSD
-URL:            http://tcllib.sourceforge.net/
-Source0:        http://downloads.sourceforge.net/tcllib/BWidget-%{version}.tar.gz
+Name:		bwidget
+Version:	1.9.0
+Release:	%mkrel 1 
+Summary:	Extended widget set for Tk
+Group:		System/Libraries
+License:	BSD
+URL:		http://tcllib.sourceforge.net/
+Source0:	http://downloads.sourceforge.net/tcllib/BWidget-%{version}.tar.gz
 #Requires:      tcl(abi) = 8.5 tk
-Requires:       tcl
-Requires:       tk
-BuildRequires:  tcl-devel
-BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
+Requires:	tcl
+Requires:	tk
+BuildRequires:	tcl-devel
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 An extended widget set for Tcl/Tk.
