@@ -1,6 +1,6 @@
 Name:		bwidget
-Version:	1.9.0
-Release:	%mkrel 1 
+Version:	1.9.2
+Release:	%mkrel 1
 Summary:	Extended widget set for Tk
 Group:		System/Libraries
 License:	BSD
