@@ -1,11 +1,11 @@
 Name:		bwidget
-Version:	1.9.2
-Release:	%mkrel 1
+Version:	1.9.6
+Release:	1
 Summary:	Extended widget set for Tk
 Group:		System/Libraries
 License:	BSD
 URL:		http://tcllib.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/tcllib/BWidget-%{version}.tar.gz
+Source0:	https://sourceforge.net/projects/tcllib/files/BWidget/1.9.6/%{name}-%{version}.tar.gz
 #Requires:      tcl(abi) = 8.5 tk
 Requires:	tcl
 Requires:	tk
@@ -105,3 +105,4 @@ An extended widget set for Tcl/Tk.
 
 * Sat Dec 10 2005 Wart <wart at kobold.org> 1.7.0-1
 - Initial spec file.
+
