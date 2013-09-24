@@ -1,29 +1,27 @@
 Name:		bwidget
-Version:	1.9.6
+Version:	1.9.7
 Release:	1
 Summary:	Extended widget set for Tk
 Group:		System/Libraries
 License:	BSD
 URL:		http://tcllib.sourceforge.net/
-Source0:	https://sourceforge.net/projects/tcllib/files/BWidget/1.9.6/%{name}-%{version}.tar.gz
+Source0:	https://sourceforge.net/projects/tcllib/files/BWidget/1.9.7/%{name}-%{version}.tar.gz
 #Requires:      tcl(abi) = 8.5 tk
 Requires:	tcl
 Requires:	tk
 BuildRequires:	tcl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 An extended widget set for Tcl/Tk.
 
 %prep
-%setup -q -n BWidget-%{version}
+%setup -q
 %{__sed} -i 's/\r//' LICENSE.txt BWman/*.html
 
 %build
 
 %install
-%{__rm} -rf %{buildroot}
 # Don't bother with the included configure script and Makefile.  They
 # are missing a lot of pieces and won't work at all.  Installation is
 # pretty simple, so we can just do it here manually.
@@ -34,10 +32,6 @@ An extended widget set for Tcl/Tk.
 %{__install} -m 0644 -pD *.tcl %{buildroot}%{tcl_sitelib}/%{name}%{version}/
 %{__install} -m 0644 -pD lang/*.rc %{buildroot}%{tcl_sitelib}/%{name}%{version}/lang/
 %{__install} -m 0644 -pD images/*.gif images/*.xbm %{buildroot}%{tcl_sitelib}/%{name}%{version}/images/
-
-
-%clean
-%{__rm} -rf %{buildroot}
 
 
 %files
@@ -105,4 +99,5 @@ An extended widget set for Tcl/Tk.
 
 * Sat Dec 10 2005 Wart <wart at kobold.org> 1.7.0-1
 - Initial spec file.
+
 
