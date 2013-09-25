@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   bwidget-1.9.6.tar.gz: 7fab989a4c169e7862cd58ea352e1d6795f49554
+sources:
+  bwidget-1.9.7.tar.gz: 6b89066ed0e6d30a7e16db57bd5221ca3cbb4e3e
