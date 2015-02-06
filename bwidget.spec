@@ -1,6 +1,6 @@
 Name:		bwidget
 Version:	1.9.7
-Release:	1
+Release:	2
 Summary:	Extended widget set for Tk
 Group:		System/Libraries
 License:	BSD
