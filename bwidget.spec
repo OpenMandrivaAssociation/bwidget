@@ -4,7 +4,7 @@ Release:	2
 Summary:	Extended widget set for Tk
 Group:		System/Libraries
 License:	BSD
-URL:		http://tcllib.sourceforge.net/
+URL:		https://tcllib.sourceforge.net/
 Source0:	https://sourceforge.net/projects/tcllib/files/BWidget/1.9.7/%{name}-%{version}.tar.gz
 #Requires:      tcl(abi) = 8.5 tk
 Requires:	tcl
