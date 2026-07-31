@@ -1,11 +1,11 @@
 Name:		bwidget
-Version:	1.9.7
-Release:	2
+Version:	1.10.1
+Release:	1
 Summary:	Extended widget set for Tk
 Group:		System/Libraries
 License:	BSD
 URL:		https://tcllib.sourceforge.net/
-Source0:	https://sourceforge.net/projects/tcllib/files/BWidget/1.9.7/%{name}-%{version}.tar.gz
+Source0:	https://sourceforge.net/projects/tcllib/files/BWidget/1.10.1/%{name}-%{version}.tar.gz
 #Requires:      tcl(abi) = 8.5 tk
 Requires:	tcl
 Requires:	tk
